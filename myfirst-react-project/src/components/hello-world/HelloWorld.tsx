@@ -1,8 +1,13 @@
 import "./HelloWorld.css";
-export function HelloWorld() {
+interface IHelloWorldProps{
+    name: string;
+    age: number;
+}
+
+export function HelloWorld(props:IHelloWorldProps) {
     return (
         <div className="header">
-            Hello World!
+            Hello World!  {props.name} age {props.age}
         </div>
     );
 }
