@@ -1,13 +1,14 @@
 import "./HelloWorld.css";
+import { IPerson } from "../../models/IPerson";
+
 interface IHelloWorldProps{
-    name: string;
-    age: number;
+    person: IPerson;
 }
 
 export function HelloWorld(props:IHelloWorldProps) {
     return (
         <div className="header">
-            Hello World!  {props.name} age {props.age}
+            Hello World!  {props.person.name} age {props.person.age}
         </div>
     );
 }
