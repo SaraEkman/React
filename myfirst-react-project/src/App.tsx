@@ -1,5 +1,4 @@
 import './App.css';
-import { Addition } from './components/addition/Addition';
 import { HelloWorld } from './components/hello-world/HelloWorld';
 import { ShowEvents } from './components/show-events/ShowEvents';
 import { ShowState } from './components/show-state/ShowState';
@@ -10,7 +9,6 @@ function App() {
   return (
     <div>
       <HelloWorld person={p} />
-      <Addition/>
       <ShowState />
       <ShowEvents />
     </div>
