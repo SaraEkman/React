@@ -1,10 +1,10 @@
 export function Lists() {
   let animals: string[] = ['Majsan', 'Sven', 'Tweet']
   let persons = [
-    { name: "Sara", age: 22 },
-    { name: "Helle", age: 10 },
-    { name: "Jonte", age: 30 },
-    { name: "Iren", age: 50 },
+    { name: 'Sara', age: 22 },
+    { name: 'Helle', age: 10 },
+    { name: 'Jonte', age: 30 },
+    { name: 'Iren', age: 50 },
   ]
 
   let lis = animals.map((animal, i) => {
@@ -12,15 +12,14 @@ export function Lists() {
   })
 
   let personLis = persons.map((person) => {
-      if (person.age > 10) {
+    if (person.age > 10) {
       return (
-            <li key={person.name}>
-              <span>{person.name}</span>
-              <span>{person.age}</span>
-            </li>
-            
-            )
-        }
+        <li key={person.name}>
+          <span>{person.name}</span>
+          <span>{person.age}</span>
+        </li>
+      )
+    }
   })
   return (
     <>
