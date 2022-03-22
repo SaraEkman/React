@@ -3,10 +3,21 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { CondRend } from './components/cond-rend/CondRend';
+import { Movies } from './components/movies/Movies';
+import { NotFound } from './components/NotFound';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<App/>}></Route>
+        <Route path='/movies' element={<Movies/>}></Route>
+        <Route path='/condrend' element={<CondRend/>}></Route>
+        <Route path='*' element={<NotFound/>}></Route>
+      </Routes>
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );

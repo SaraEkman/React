@@ -1,8 +1,8 @@
 import './App.css';
-import { CondRend } from './components/cond-rend/CondRend';
+// import { CondRend } from './components/cond-rend/CondRend';
 import { HelloWorld } from './components/hello-world/HelloWorld';
 import { Lists } from './components/lists/Lists';
-import { Movies } from './components/movies/Movies';
+// import { Movies } from './components/movies/Movies';
 import { ShowEvents } from './components/show-events/ShowEvents';
 import { ShowState } from './components/show-state/ShowState';
 import { IPerson } from './models/IPerson';
@@ -14,9 +14,10 @@ function App() {
       <HelloWorld person={p} />
       <ShowState />
       <ShowEvents />
-      <CondRend></CondRend>
-      <Lists></Lists>
-      <Movies></Movies>
+      {/* <CondRend></CondRend> */}
+     <Lists></Lists>
+      {/* <Movies></Movies> */}
+      Main Works
     </div>
   );
 }
