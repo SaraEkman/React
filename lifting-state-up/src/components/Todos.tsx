@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Todo } from '../models/Todo'
+import { AddTodo } from './AddTodo'
 import { PrintTodo } from './PrintTodo'
 
 export const Todos = () => {
@@ -13,9 +14,15 @@ export const Todos = () => {
         setTodos([...todos])
     }
 
+    const addTodo = (newTodo: Todo) => {
+        setTodos([...todos, newTodo])
+    }
+
   let printList = todos.map((todo: Todo, i) => {
       return <PrintTodo key={i} todo={todo} toggleTodo={toggle }></PrintTodo>
   })
 
-  return <>{printList}</>
+    return <>
+        <AddTodo saveTodo={addTodo}/>
+        {printList}</>
 }

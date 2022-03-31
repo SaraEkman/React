@@ -15,7 +15,6 @@ export const PrintTodo = (props: IPrintTodoProps) => {
   function handleClick() {
     props.toggleTodo(props.todo)
   }
-  console.log(props.todo)
 
   return (
     <>
